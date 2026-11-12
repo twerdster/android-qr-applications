@@ -8,11 +8,19 @@ Supervision: Aaron Wetzler.
 
 ## Status
 
-**Coming soon.** This repository is being prepared as a historical student-project archive. Original source code, project documents and build instructions will be added as they are recovered and reviewed. It is not yet a runnable release.
+**Partial original source recovered. Build and run untested.** `source/` contains the student-specific QRoom Java classes, PHP CMS/query code and original Android manifest/platform configuration from the January 2012 handoff. It is not a complete or runnable release.
 
 ## Running
 
-No runnable source has been published in this repository yet. Platform requirements and setup instructions will be recorded from the original project files rather than guessed.
+The original Android configuration targets API 8 (Android 2.2). The launcher is `technion.ee.softlab.qroom.QRoom.MainActivity`; the application class is `qrRoomsApplication`. The original project used the legacy Android/Eclipse/Ant-era toolchain and a repackaged ZXing scanner. ZXing core/client code, PHP QR Code, Android resources/assets, generated output and APKs are intentionally omitted. No verified original one-command build procedure was recovered.
+
+The backend uses PHP's historical `mysql_*` API and MySQL. No database/schema or personal campus records are included. This legacy web code has not had a security audit and must not be deployed unchanged or exposed to the internet. Original Android URLs point to an old institutional service; they were not contacted or validated during recovery.
+
+### Credential Removal
+
+The two `source/{CMS,queries}/includes/constants.php` files originally embedded private deployment values. They are the only modified source files: the original values were replaced with `QROOM_DB_SERVER`, `QROOM_DB_USER`, `QROOM_DB_PASS` and `QROOM_DB_NAME` environment-variable lookups and explicit placeholder defaults. Raw originals remain private. Set these variables only for a separately reviewed local deployment; never commit real values.
+
+Two legacy duplicate Java activities containing personal contact details were omitted. All other imported files retain their original bytes. No student reports, personal records, signing keys, VCS history, vendor code or prebuilt executables are included. Missing scanner classes/resources and the database prevent a complete build/deployment from this subset.
 
 ## Links
 
@@ -20,5 +28,5 @@ No runnable source has been published in this repository yet. Platform requireme
 
 ## Attribution and Updates
 
-Original student and third-party attribution will be retained. No license for unrecovered source code is implied by this README. Original authors can open an issue to contribute updates or request corrections or removal of their material.
+Original student credits are preserved. No blanket software license has been added; third-party libraries must be obtained under their own terms. Importing a historical snapshot does not establish a complete license grant for every dependency. Original authors can open an issue to contribute updates or request corrections or removal of their material.
 
