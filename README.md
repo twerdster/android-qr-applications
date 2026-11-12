@@ -14,7 +14,7 @@ Supervision: Aaron Wetzler.
 
 The original Android configuration targets API 8 (Android 2.2). The launcher is `technion.ee.softlab.qroom.QRoom.MainActivity`; the application class is `qrRoomsApplication`. The original project used the legacy Android/Eclipse/Ant-era toolchain and a repackaged ZXing scanner. ZXing core/client code, PHP QR Code, Android resources/assets, generated output and APKs are intentionally omitted. No verified original one-command build procedure was recovered.
 
-The backend uses PHP's historical `mysql_*` API and MySQL. No database/schema or personal campus records are included. This legacy web code has not had a security audit and must not be deployed unchanged or exposed to the internet. Original Android URLs point to an old institutional service; they were not contacted or validated during recovery.
+The backend uses PHP's historical `mysql_*` API and MySQL. No database/schema or personal campus records are included. A November 2026 static audit found SQL injection, missing application-level authentication/CSRF checks, and execution of database-supplied content through `eval`. **Do not deploy this archival backend or expose it to the internet.** Credential removal does not fix these vulnerabilities; the backend needs a security redesign before use. Original Android URLs point to an old institutional service; they were not contacted or validated during recovery.
 
 ### Credential Removal
 
