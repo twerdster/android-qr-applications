@@ -1,5 +1,13 @@
 # QR code applications on Android
 
+<p align="center">
+  <img src="assets/project-preview.jpg" alt="Main screen of the QRoom Android app, explaining that scanning a classroom door QR code shows class, course and staff information, with Help, All Rooms, Contact, About and Exit buttons" width="300">
+</p>
+
+![Platform: Android + PHP/MySQL backend](https://img.shields.io/badge/platform-Android%20%2B%20PHP%2FMySQL-lightgrey)
+![Source: partial snapshot](https://img.shields.io/badge/source-partial%20snapshot-orange)
+![Backend: do not deploy](https://img.shields.io/badge/backend-do%20not%20deploy-red)
+
 A campus information system with automatically generated QR codes for lecture rooms, schedules and lecturer information.
 
 Students: Tamir Buchris, Vitaly Kleynik.
@@ -9,6 +17,10 @@ Supervision: Aaron Wetzler.
 ## Status
 
 **Partial original source recovered. Build and run untested.** `source/` contains the student-specific QRoom Java classes, PHP CMS/query code and original Android manifest/platform configuration from the January 2012 handoff. It is not a complete or runnable release.
+
+## Original code
+
+The recovered files are in [`source/`](source/): the QRoom Android app in [`source/QRRooms/`](source/QRRooms/), the PHP content-management system in [`source/CMS/`](source/CMS/) and the PHP query endpoints in [`source/queries/`](source/queries/). Apart from the two sanitized `constants.php` files described below, they retain their original bytes. The backend is archival only; read the security notice below before using any of it.
 
 ## Running
 
@@ -29,4 +41,6 @@ Two legacy duplicate Java activities containing personal contact details were om
 ## Attribution and Updates
 
 Original student credits are preserved. No blanket software license has been added; third-party libraries must be obtained under their own terms. Importing a historical snapshot does not establish a complete license grant for every dependency. Original authors can open an issue to contribute updates or request corrections or removal of their material.
+
+Figure provenance: `assets/project-preview.jpg` is the original student-project app screenshot from the archived project page on Aaron Wetzler's website, copied without modification.
 
