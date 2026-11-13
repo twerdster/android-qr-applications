@@ -46,5 +46,7 @@ A private recovery manifest (not published) distinguishes the 79 unchanged files
 
 Original student credits are preserved. No blanket software license has been added; third-party libraries must be obtained under their own terms. Original authors can open an issue to contribute updates or request corrections or removal of their material.
 
+On 2026-11-12, Vitaly Kleynik confirmed that he was comfortable with Aaron Wetzler keeping the archival project page and repository. This records Vitaly Kleynik's response only; no software license is added. The backend security warning and partial-source limitations remain in effect.
+
 Figure provenance: `assets/project-preview.jpg` is the original student-project app screenshot from the archived project page on Aaron Wetzler's website, copied without modification.
 
